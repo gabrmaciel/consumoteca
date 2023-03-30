@@ -25,6 +25,7 @@ body{
     width: 100%;
     text-align: center;
     height: 60vh;
+    margin-top: 60px
 }
 
 .img img{
@@ -34,15 +35,15 @@ body{
 .box{
     float: left;
     width: 100%;
-    height: 40vh;
+    height: calc(40vh - 60px);
     text-align: center;
     color: #FFF;
     font-family: IBM Plex Sans;
 }
 
 .box-title{
-    font-weight: 300;
-    font-size: 4rem;
+    font-weight: 200;
+    font-size: 3.66rem;
     margin-top: 2vh;
     margin-bottom: 4vh;
 }
@@ -78,9 +79,46 @@ body{
     width: 100px;
     height: 46px;
     border-radius: 100px;
-    margin-left: 2px;
+    margin-left: 7px;
     color:#FFF;
     background: rgb(255, 105, 88);
     border: 0px;
     font-weight: 500;
+    cursor: pointer;
 }
+
+.box-input-placeholder-colorido::-webkit-input-placeholder {
+    color: rgb(255, 105, 88);
+}
+
+.tropical{
+    position: fixed;
+    bottom: -190px;
+    left: -100px;
+    width: 390px;
+    animation-name: roda-roda;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+.logo{
+    position: fixed;
+    top: 65px;
+    left: 70px;
+    width: 220px;
+}
+
+.estrela{
+    position: fixed;
+    bottom: 20px;
+    right: -330px;
+    width: 580px;
+    animation-name: roda-roda;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes roda-roda {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
