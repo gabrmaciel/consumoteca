@@ -97,8 +97,9 @@ body{
     left: -100px;
     width: 390px;
     animation-name: roda-roda;
-    animation-duration: 60s;
+    animation-duration: 90s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 .logo{
@@ -114,8 +115,9 @@ body{
     right: -330px;
     width: 580px;
     animation-name: roda-roda;
-    animation-duration: 40s;
+    animation-duration: 90s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes roda-roda {
