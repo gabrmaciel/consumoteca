@@ -111,13 +111,19 @@ body{
 
 .estrela{
     position: fixed;
-    bottom: 20px;
-    right: -330px;
-    width: 580px;
+    bottom: 100px;
+    right: -260px;
+    width: 480px;
     animation-name: roda-roda;
     animation-duration: 90s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.consumo{
+    position: fixed;
+    bottom: 45px;
+    right: 45px;
 }
 
 @keyframes roda-roda {
