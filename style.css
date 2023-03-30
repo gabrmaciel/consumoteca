@@ -24,7 +24,7 @@ body{
     float: left;
     width: 100%;
     text-align: center;
-    height: 60vh;
+    height: 55vh;
     margin-top: 60px
 }
 
@@ -35,7 +35,7 @@ body{
 .box{
     float: left;
     width: 100%;
-    height: calc(40vh - 60px);
+    height: calc(45vh - 60px);
     text-align: center;
     color: #FFF;
     font-family: IBM Plex Sans;
