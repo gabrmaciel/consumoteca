@@ -1,8 +1,39 @@
-*{
+.body-inner-div {
+    max-width: 1180px;
+    margin: auto;
+    text-align: left;
+    padding: 0px 16px;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: IBM Plex Sans;
+    font-family: Inter !important;
+    text-decoration: none;
+    outline-style: none;
+    transition: 0.66s
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 html, body{
@@ -10,252 +41,3388 @@ html, body{
 }
 
 body{
-    background: rgb(28, 30, 56)
+    background-color: #f5f5f5;
 }
 
-.body-inner-div{
-    max-width: 1280px;
-    margin: auto;
-    text-align: left;
-    padding: 0px 16px;
-}
-
-.img{
-    float: left;
-    width: 100%;
-    text-align: center;
-    height: 55vh;
-    margin-top: 60px
-}
-
-.img img{
+#App{
+    position: fixed;
+    left: 250px;
+    width: calc(100% - 250px);
     height: 100%;
+    overflow-y: scroll
 }
 
-.box{
+#Topo{
     float: left;
     width: 100%;
-    height: calc(45vh - 60px);
-    text-align: center;
-    color: #FFF;
-    font-family: IBM Plex Sans;
+    height: 100px;
+    background: #F2F2F2;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.box-title{
-    font-weight: 200;
-    font-size: 3.66rem;
-    margin-top: 2vh;
-    margin-bottom: 4vh;
+
+#Topo .body-inner-div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.box-title-2{
-    display: none;
-    font-size: 2.75rem
-}
-
-.box-title-futuro{
-    font-family: IBM Plex Serif;
-    font-weight: 700;
-    margin-top: -5px
-}
-
-.box-title-2-futuro{
+#Topo .Menu{
     float: left;
-    width: 100%;
 }
 
-.box-frase{
-    font-size: 1rem
-}
-
-.box-input{
-    float: left;
-    width: 100%;
-    padding-top: 2vh
-}
-
-.box-input input{
-    max-width: 33.3%;
-    width: 100%;
-    border-radius: 100px;
-    background: #FFF;
-    border: 0;
-    padding: 14px 20px;
-    font-family: IBM Plex Sans;
-    font-weight: 600;
-    
-}
-
-.box-input input::-webkit-input-placeholder{
-    color: #999
-}
-
-.box-input button{
-    min-width: 100px;
-    width: 100px;
-    height: 46px;
-    border-radius: 100px;
-    margin-left: 7px;
-    color:#FFF;
-    background: rgb(255, 105, 88);
-    border: 0px;
-    font-weight: 500;
+#Topo .MenuImg{
+    width: 40px;
     cursor: pointer;
 }
 
-.box-input-placeholder-colorido::-webkit-input-placeholder {
-    color: rgb(255, 105, 88);
+#Topo .Logo{
+    float: left;
 }
 
-.tropical{
+#Topo .Perfil{
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+#Topo .PerfilImg{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background: #cecece;
+    border: 1px solid #a5a5a5;
+}
+
+#Topo .PerfilNome{
+    color: #666;
+    margin-right: 10px;
+}
+
+#Corpo{
+    float: left;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+#Corpo .Migalha{
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #888;
+    padding-bottom: 12px;
+}
+
+.MigalhaSetor{
+    float: left;
+    color: #FFF;
+    font-size: 12px;
+    padding: 3px 4px;
+    margin-top: -5px;
+    margin-right: 5px;
+    position: relative;
+    top: 3px;
+    text-transform: uppercase;
+}
+
+.Engenharia{
+    background: linear-gradient(to bottom, rgb(14 112 221), rgb(38 69 103));
+}
+
+.Planejamento{
+    background: linear-gradient(to bottom, rgb(255 175 4), rgb(127 88 3));
+}
+
+.Administracao{
+    background: linear-gradient(to bottom, rgb(191 4 255), rgb(92 8 119));
+}
+
+.MigalhaSpan{
+    float: left;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: rgb(206, 0, 0);
+    cursor: pointer;
+    padding-left: 39px;
+}
+
+.MigalhaSpanExportar{
+    float: left;
+    background: rgb(44 125 29);
+    border-radius: 100px;
+    padding: 10px;
+    color: #FFF;
+    font-size: 14px;
+    padding-left: 8px;
+    margin-top: -36px;
+    cursor: pointer;
+}
+
+.MigalhaSpanExportar img{
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    margin-left: 4px
+}
+
+.MigalhaSpanExportar span{
+    float: left;
+    margin-top: 2px
+}
+
+.MigalhaOrdem{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #1f1f1f;
+}
+
+.MigalhaOrdemSeparador{
+    float: left;
+    width: 100%;
+    height: 28px;
+}
+
+#Menu{
     position: fixed;
-    bottom: -190px;
-    left: -100px;
-    width: 390px;
-    animation-name: roda-roda-2;
-    animation-duration: 90s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1;
 }
 
-.logo{
+#Menu .Menu{
+    float: left;
+    height: 100%;
+    background: #222;
+    width: 250px;
+    padding-top: 60px;
+    position: relative;
+}
+
+#Menu .MenuNome{
+    float: left;
+    width: 100%;
+    padding: 0px 16px;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Menu .MenuNome span{
+    float: left;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    display: block;
+}
+
+#Menu .MenuNomeImg{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #ccc;
+    margin-bottom: 12px;
+    background-image: url('person.png');
+    background-size: 68px 68px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#Menu .MenuFechar{
+    float: left;
+    width: 100%;
+    font-weight: 700;
+    text-align: right;
+    padding: 16px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#Menu .MenuLis{
+    float: left;
+    width: 100%;
+    max-height: calc(100% - 170px);
+    overflow-y: scroll;
+}
+
+#Menu .MenuLista{
+    float: left;
+    width: 100%;
+    background: #404040;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: right;
+    position: relative;
+}
+
+#Menu .MenuListaVerde{
+    background: rgb(46 221 14);
+}
+
+#Menu .MenuListaInfo{
+    z-index: 2;
+}
+
+#Menu .MenuListaLista:hover .MenuListaSub{
+    top: 100%;
+}
+
+#Menu .MenuListaLista:hover .MenuLista{
+    background: rgb(46 221 14);
+}
+
+#Menu .MenuListaHover{
+    background: rgb(46 221 14);
+}
+
+#Menu .MenuListaHover .MenuListaTitulo{
+    border-bottom: 1px solid rgb(46 221 14);
+}
+
+#Menu .MenuLista:hover{
+    background: rgb(46 221 14);
+}
+
+#Menu .MenuLista:hover .MenuListaTitulo{
+    border-bottom: 1px solid rgb(46 221 14);
+}
+
+#Menu .MenuListaMaquinas{
+    float: left;
+    width: 100%;
+    font-weight: 400;
+    padding: 10px 20px;
+    color: #FFF;
+}
+
+#Menu .MenuListaTitulo{
+    float: left;
+    width: 100%;
+    padding: 16px 20px;
+    border-bottom: 1px solid #707070;
+    position: relative;
+}
+
+.MenuListaTituloInicio{
+    border-bottom: 2px solid #707070 !important;
+    z-index: 99;
+}
+
+#Menu .MenuListaTituloMaquinas{
+    border-bottom: 0px solid #707070;
+    margin-bottom: -10px;
+}
+
+#Menu .MenuListaLista{
+    float: left;
+    position: relative;
+    width: 100%;
+    color: #FFF;
+}
+
+#Menu .MenuListaSub{
+    float: left;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: absolute;
+    top: calc(-100% - 4px);
+    right: 0;
+    z-index: 1;
+    background: rgb(40 191 12);
+    padding-right: 18px;
+    padding-left: 10px
+}
+
+#Menu .MenuListaSub2{
+    top: calc(-100% + 4px);
+}
+
+#Menu .MenuListaSubSpan{
+    float: left;
+    display: inline;
+    padding: 5px 0;
+    cursor: pointer;
+    background: rgb(40 191 12);
+}
+
+#Menu .MenuListaSubSpan:hover{
+    text-decoration: underline;
+}
+
+#Menu .Fechar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url('cancel.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+#Menu .Abrir{
+    position: absolute;
+    top: 20px;
+    right: 19px;
+    width: 22px;
+    height: 22px;
+    background: url('menu-white.png');
+    background-size: cover;
+    display: none;
+    cursor: pointer;
+}
+
+#MenuMobile{
     position: fixed;
-    top: 65px;
-    left: 70px;
-    width: 220px;
+    width: 100%;
+    z-index: 99;
+    padding: 0px 20px;
+    height: 64px;
+    background: #222;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.estrela{
+#MenuMobile img{
+    float: left;
+    width: 36px;
+    filter: brightness(5);
+}
+
+#MenuMobile .MenuMobileNome{
+    float: left;
+    display: flex;
+    align-items: center;
+}
+
+
+#MenuMobile .MenuMobileNome span{
+    float: left;
+    margin-right: 10px;
+    font-size: 15px;
+    color: #f5f5f5;
+}
+
+#MenuMobile .MenuMobileNomeImg{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #ccc;
+    background-image: url('person.png');
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* #Menu .Fundo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+} */
+
+#Corpo{
+    float: left;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    padding-left: 40px;
+    padding-right: 20px;
+    min-width: 100%;
+}
+
+#Corpo .Maquinas{
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.MaquinasCorpo{
+    float: left;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    opacity: 0.3
+}
+
+.MaquinasCorpoFinal{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #F5F5F5, rgba(255, 255, 255, 0))
+}
+
+#Corpo h1{
+    float: left;
+    width: calc(100% - 152px);
+    margin-bottom: 24px;
+    color: #1f1f1f
+}
+
+#Corpo .BotaoAdicionar{
+    float: left;
+    background: rgb(100, 100, 100);
+    border: none;
+    border-radius: 100px;
+    padding: 11px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFF;
+    margin-bottom: 28px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#Corpo .BotaoAdicionarDiv{
+    float: left;
+    width: 100%;
+}
+
+#Corpo .BotaoAdicionarImg{
+    float: left;
+    display: none;
+    width: 20px;
+    margin-top: -5px;
+    margin-right: 7px;
+    position: relative;
+    top: 4px;
+}
+
+#Corpo .Voltar{
+    float: left;
+    font-size: 13px;
+    margin-left:14px;
+    margin-top: 22px;
+    text-decoration:underline;
+    color: rgb(21,86,9);
+    cursor:pointer
+}
+
+#Corpo .BotaoAdicionarEnviarSpan{
+    float: left
+}
+
+#Corpo .BotaoAdicionarCarregando{
+    background: rgb(100, 100, 100) !important;
+}
+
+#Corpo .BotaoAdicionarMaquina{
+    font-size: 16px;
+    background: rgb(46 221 14)
+}
+
+#Corpo .MaquinasLista{
+    float: left;
+
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#Corpo .MaquinasLista:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#Corpo .Apenas{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    margin-top: -14px;
+    margin-bottom: 28px;
+    color: #252525;
+}
+
+#Corpo .Apenas2{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #252525;
+}
+
+#Corpo .BotaoAdicionarEnviar{
+    background: rgb(46 221 14);
+    padding: 11px 22px;
+    font-size: 16px;
+}
+
+#Corpo .NomeMaquina{
+    float: left;
+    width: 300px;
+    background-color: #FFF;
+    border-radius: 49px;
+    padding: 10px 18px;
+    border: 2px solid #777;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#Corpo .NomeMaquina4{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.NomeMaquina2{
+    width: 90px !important;
+    text-align: center;
+}
+
+.NomeMaquina3{
+    width: 510px !important;
+}
+
+.MaquinaAdicionarTopo{
+    float: left;
+    width: 300px;
+}
+
+.MaquinaAdicionarTopo2{
+    float: left;
+    width: 320px;
+    padding-left: 20px;
+}
+
+.MaquinaAdicionarTopo select{
+    float: left;
+    width: 100%;
+    border: 2px solid #777;
+    border-radius: 100px;
+    font-size: 16px;
+    padding: 10.5px;
+}
+
+.MaquinaAdicionarTopo2 select{
+    float: left;
+    width: 100%;
+    border: 2px solid #777;
+    border-radius: 100px;
+    font-size: 16px;
+    padding: 10.5px;
+}
+
+.MaquinaAdicionarTopo2Span{
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px
+}
+
+.MaquinaAdicionarTopo2SpanDiv1{
+    float: left;
+    width: 100%;
+    font-size: 15px
+}
+
+.MaquinaAdicionarTopo2SpanDiv2{
+    float: left;
+    width: 100%;
+    margin-top: 22px
+}
+
+.NomeMaquinaSolicitante{
+    margin-top: 19px;
+    margin-bottom: 0 !important;
+}
+
+.MaquinaAdicionarTopo2Select3{
+    float: left;
+    width: calc(100% - 14px);
+    border: 2px solid #777;
+    border-radius: 100px;
+    font-size: 16px;
+    padding: 10.5px;
+}
+
+.NomeMaquinaAdd{
+    width: 140px !important;
+}
+
+.NomeMaquinaAdd2{
+    margin-left: 20px
+}
+
+#Treeview{
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+#Treeview .Lista{
+    float: left;
+    width: 100%;
+    font-size: 10px;
+    padding-left: 20px;
+}
+
+.ListaImg{
+    float: left;
+    width: 28px;
+    height: 38px;
+    background-image: url('processo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.ListaImgNum{
+    color: #FFF;
+    font-weight: 700;
+    position: absolute;
+    top: 23px;
+    left: 18px;
+}
+
+.NivelLinha{
+    float: left;
+    padding-bottom: 0px;
+    width: 100%;
+    margin-bottom: 4px;
+    transition: 0s;
+    position: relative;
+}
+
+.NivelLinhaNone{
+    visibility: hidden;
+    position: absolute;
+    z-index: -9999;
+    width: 0px;
+    height: 0px
+}
+
+.NivelLinhaBlock{
+    visibility: visible;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+}
+
+.Nivel{
+    float: left;
+    border-radius: 0px;
+    padding-right: 10px;
+    color: #222;
+    display: flex;
+    align-items: center;
+    position:relative;
+    cursor: pointer;
+    min-width: 100%;
+}
+
+.Nivel:hover .NivelAdicionar{
+    display: block !important;
+}
+
+/* .NivelLinha:hover{
+    padding-bottom: 50px;
+} */
+
+/* .NivelLinha:hover .NivelBordaAdicionar{
+    display: block;
+} */
+
+/* .NivelLinha:hover .NivelBorda{
+    height: 50px
+} */
+
+.NivelPai{
+    float: left;
+    width: 3100px;
+    position: relative;
+}
+
+.NivelPai input{
+}
+/* .NivelPaiBorda{
+    position: absolute;
+} */
+
+.NivelFilho{
+    float: left;
+    width: 100%;
+    position: relative;
+    transition: 0s;
+}
+
+/* .NivelFilho2{
+    margin-left: 30px;
+}
+
+.NivelFilho3{
+    margin-left: 60px;
+}
+
+.NivelFilho4{
+    margin-left: 90px;
+}
+
+.NivelFilho5{
+    margin-left: 120px;
+} */
+
+.NivelFilhoItem{
+    float: left;
+    width: 100%;
+    padding-left: 45px;
+}
+
+.NivelFilhoItemSpan{
+    float: left;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 10px 16px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #222;
+    position: relative;
+}
+
+.NivelFilhoItemSpan a{
+    color: #222;
+}
+
+.NivelFilhoItemEditar{
+    position: absolute;
+    left: calc(100% + 6px);
+    top: 10px;
+    font-weight: 800;
+    text-decoration: underline;
+    display: none;
+    cursor: pointer;
+}
+
+.NivelFilhoItem:hover .NivelFilhoItemEditar{
+    display: block;
+}
+
+/* .Nivel1{
+    background: #5B9BD5;
+}
+
+*/
+.Nivel2, .Nivel3, .Nivel4, .Nivel5{
+    filter: brightness(0.9)
+}
+
+/*
+.Nivel2{
+    background: #FFC000;
+}
+
+.Nivel3{
+    background: #70AD47;
+}
+
+.Nivel4{
+    background: #C00000;
+}
+
+.Nivel5{
+    background: #804694;
+} */
+
+
+.Center{
+    text-align: center !important;
+}
+
+.NivelLinha:last-child .NivelBorda{
+    display: none;
+}
+
+.NivelNum{
+    float: left;
+    width: 10%;
+    height: 34px;
+    color: #222;
+    border-right: 4px solid #F5F5F5;
+    text-align: center;
+    padding-top: 10px;
+    background: #FFF;
+    font-size: 13px;
+}
+
+.NivelBorda{
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    top: 100%;
+    left: 60px;
+    background: #5B9BD5;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.NivelBordaAdicionar{
+    display: none;
+    min-width: 240px;
+    margin-left: -8px;
+    padding-left: 22px;
+    background-image: url("nivel1.png");
+    background-repeat: no-repeat;
+    height: 16px;
+    background-size: contain;
+    font-size: 14px;
+    color: #5B9BD5;
+    cursor:pointer
+}
+
+.NivelBordaAdicionar2{
+    color: #FFC000;
+    background-image: url("nivel2.png");
+}
+
+.NivelBordaAdicionar3{
+    color: #70AD47;
+    background-image: url("nivel3.png");
+}
+
+.NivelBordaAdicionar4{
+    color: #C00000;
+    background-image: url("nivel4.png");
+}
+
+.NivelBorda1{
+    left: 90px
+}
+
+.NivelBorda2{
+    background: #FFC000;
+}
+
+.NivelBorda3{
+    background: #70AD47;
+}
+
+.NivelBorda4{
+    background: #C00000;
+}
+
+.NivelSpan{
+    float: left;
+    width: 90%;
+    padding-top: 10px;
+    text-align: left;
+    background: #FFF;
+    border-right: 4px solid #f5f5f5;
+    height: 34px;
+    padding-left: 10px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+}
+
+.NivelLinhaAbre{
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-top: -28px;
+    margin-left: -15px;
+    position: relative;
+    top: 0px;
+    left: -6px;
+    background-image: url('down-white.png');
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(200, 200, 200), rgb(120, 120, 120));
+    border: 1px solid rgb(133 133 133);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    transition: 0s;
+    /*transform: rotate(180deg);*/
+}
+
+.NivelLinhaAbreBlock{
+    display: flex;
+}
+
+.NivelLinhaAbreNone{
+    display: none;
+}
+
+.NivelLinhaFecha{
+    display: none;
+    z-index: 1;
+    /*background: linear-gradient(to bottom, rgb(250, 93, 93), rgb(222, 37, 37));*/
+}
+
+.NivelLinhaAbreDiv{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 100%;
+}
+
+.NivelAdicionar{
+    float: left;
+    width: 276px;
+    height: 34px;
+    margin: 10px 0;
+    margin-top: 8px;
+    position: absolute;
+    bottom: -10px;
+    cursor: pointer;
+    z-index: 1;
+    background: linear-gradient(to bottom, #88d4ff, #00156c);
+    font-size: 12px;
+    padding-top: 9px;
+    text-align: center;
+    color: #FFF;
+    display: none;
+}
+
+.NivelAdicionar img{
+    position: absolute;
+    top: 9px;
+    left: 34px;
+    width: 14px;
+}
+
+.NivelAdicionarDiv{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    display: none;
+}
+
+.NivelAdicionarTipo{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    margin-top: -2px;
+}
+
+.NivelAdicionarTipoInput{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    padding-left: 10px;
+    margin-top:2px;
+}
+
+.NivelAdicionarCSV{
+    position: absolute;
+    top: 40px;
+    z-index: 1;
+    width: 100%;
+    display: none;
+}
+
+.enviar_csv_linha{
+    float: left;
+    width: calc(100% - 250px);
+    height: 200px;
     position: fixed;
-    bottom: 100px;
-    right: -260px;
-    width: 480px;
-    animation-name: roda-roda;
-    animation-duration: 90s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    z-index: 99;
+    bottom: 0;
+    left: 250px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter:  blur(10px);
 }
 
-.consumo{
+.enviar_csv_linha_span{
+    float: left;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.enviar_csv_linha_cancelar{
+    float: left;
+    width: 100%;
+    color: #C00000;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: -16px;
+    position: relative;
+    top: 24px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.enviar_csv_linha_div{
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.NivelAdicionarCSVBotao{
+    float: left;
+    background: rgb(100, 100, 100);
+    border: none;
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-weight: 700;
+    font-size: 12px;
+    color: #FFF;
+    margin-bottom: 28px;
+    margin-top: -1px;
+    cursor: pointer;
+}
+
+.NivelAdicionarCSVEnviar{
+    float: left;
+    margin-left: 4px;
+    font-size: 14px;
+    padding: 9px 20px;
+    border-radius: 100px;
+    background: linear-gradient(190deg, #88d4ff, #00156c);
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 28px;
+    margin-top: -1px;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+}
+
+.NivelAdicionarTipoInput input{
+    margin-right: 5px;
+}
+
+.NivelAdicionarDiv input{
+    float: left;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    padding: 4px 10px;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.NivelAdicionarDivSelect{
+    float: left;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    padding: 4px 10px;
+    font-size: 12px;
+    margin-right: 4px;
+}
+
+.TabelaProInputNivel{
+    width: 76px !important;
+    min-width: 76px !important;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.TabelaProInputModulo{
+    width: 196px !important;
+    min-width: 76px !important;
+}
+
+.TabelaProInputSuprimento{
+    width: 146px !important;
+    min-width: 146px !important;
+}
+
+.TabelaAdicionarButton{
+    float: left;
+    width: 76px;
+    height: 34px;
+    border-radius: 5px;
+    background:linear-gradient(170deg, #88d4ff, #00156c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFF;
+    border: 0px;
+    cursor: pointer;
+}
+
+.NivelAdicionarTabela{
+    float: left;
+    width: 1450px;
+    display: none;
+    margin-top: -2px;
+}
+
+.NivelAdicionarTabela input{
+    float: left;
+    border: 1px solid #777;
+    border-radius: 8px;
+    height: 37.5px;
+    font-size: 16px;
+    padding: 0 10px
+}
+
+.NivelAdicionarTabela select{
+    float: left;
+    border: 1px solid #777;
+    border-radius: 8px;
+    height: 37.5px;
+    font-size: 16px;
+    padding: 0 10px
+}
+
+.NivelFilho:hover{
+    padding-bottom: 18px;
+    transition: 0s;
+}
+
+.NivelFilho1:hover{
+    padding-bottom: 0  !important;
+    margin-top: 0 !important;
+}
+
+.NivelFilho:hover .NivelAdicionar{
+    display: block;
+}
+
+.NivelFilho:hover .NivelLinhaAbre{
+    top: 11px;
+    transition: 0s;
+}
+
+.NivelFilho1:hover .NivelLinhaAbre{
+    top: 11px !important;
+}
+
+.NivelFilho:hover .NivelLinha{
+    margin-top: 0px;
+    transition: 0s;
+}
+
+.NivelFilho1:hover .NivelLinha{
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.NivelAdicionar span{
+    position: absolute;
+    top: -8px;
+    left: 62px;
+    background: #f5f5f5;
+    padding: 0 2px;
+    font-size: 12px;
+    color: rgb(37, 189, 10);
+}
+
+.NivelAdicionarBotao{
+    height: 37.5px;
+    border-radius: 8px;
+    background: #007bff;
+    border: 0px;
+    color: #FFF;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.AdicionarProcesso{
+    float: left;
+    min-width: 400px;
+    margin-bottom: 20px;
+    display: none;
+    position: absolute;
+    top: calc(100% + 50px);
+}
+
+.AdicionarProcessoTexto{
+    float: left;
+    padding: 10px 16px;
+    border-radius: 100px;
+    margin-right: 10px;
+    color: #222;
+}
+
+.AdicionarProcessoBotao{
+    float: left;
+    padding: 10px 16px;
+    border: 0px solid;
+    border-radius: 100px;
+    background: #4f5254;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.TreeviewNivel{
+    float: left;
+    width: 60%;
+    border: 1px solid red;
+}
+
+.Barra{
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.Pasta{
+    float: left;
+    width: 100%;
+}
+
+.PastaImg{
+    float: left;
+    width: 36px;
+    height: 36px;
+    background: url('pasta.png');
+    background-size: cover;
+}
+
+.PastaNome{
+    float: left;
+    width: calc(100% - 36px);
+    height: 36px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.Login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
+    padding: 20px;
+    height: 360px;
+    max-width: 435px;
+}
+
+.Login2{
+    margin-right: 40px;
+    width: 300px;
+    height: 360px
+}
+
+.LoginTipo{
+    float: left; 
+    font-size: 11px; 
+    color: #FFF; 
+    margin-top: 32px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+}
+
+.LoginCorpo{
+    float: left;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginTitulo{
+    float: left;
+    width: 100%;
+    font-size: 26px;
+    font-weight: 700;
+    color: #444
+}
+
+.LoginTitulo4{
+    margin-top: -58px
+}
+
+.LoginEsqueci{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    margin-top: 16px;
+    text-align: right;
+    color: rgb(37, 189, 10);
+    cursor:pointer
+}
+
+.LoginEsqueci:hover{
+    text-decoration: underline
+}
+
+.LoginTitulo2{
+    font-size: 18px;
+    margin-top: 6px
+}
+
+.LoginTitulo3{
+    font-size: 13px;
+    margin-top: 15px;
+    color: #777;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+}
+
+.LoginLogar{
+    float: left;
+    width: 100%;
+    border: 2px solid #999;
+    border-radius: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    color: #222;
+}
+
+.LoginLogarBotao{
+    float: left;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    background: linear-gradient(190deg, rgb(70, 225, 30), rgb(21, 120, 5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+.LoginLogarBotaoRegistrar{
+    background: linear-gradient(190deg, #88d4ff, #00156c);
+}
+
+.LoginRegistrar{
+    float: left;
+    width: 100%;
+}
+
+.LoginLogar2{
+    width: calc(50% - 7px);
+}
+
+.LoginLogar3{
+    margin-right: 14px
+}
+
+.BordaErro{
+    border: 2px solid rgb(206, 0, 0) !important;
+}
+
+.ColorErro{
+    color: rgb(206, 0, 0);
+}
+
+.Tabela{
+    float: left;
+    width: 100%;
+}
+
+.TabelaTopo{
+    float: left;
+    width: 100%;
+}
+
+.TabelaTopoSpan{
+    float: left;
+    background: rgb(46 221 14) !important;
+    padding: 7px 9px;
+    color: #FFF;
+    font-weight: 700;
+    border-right: 4px solid #F5F5F5;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.TabelaCorpo{
+    float: left;
+    width: 100%;
+    color: #1f1f1f;
+}
+
+.TabelaCorpoAtivo{
+    color: rgb(46 221 14)
+}
+
+.TabelaCorpoAtivo span{
+    background: #cdffcd !important;
+}
+
+.TabelaCorpoSpan{
+    float: left;
+    padding: 7px 9px;
+    background: #FFF;
+    border: 4px solid #f5f5f5;
+    border-left: 0px solid #f5f5f5;
+    border-right: 4px solid #f5f5f5;
+    border-bottom: 2px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 13px;
+    min-height: 34px;
+    color: #222;
+}
+
+.TabelaCorpoSpan img{
+    width: 12px;
+}
+
+.Tabela10{
+    width: 10%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.Tabela20{
+    width: 20%;
+    text-transform: capitalize;
+}
+
+.Tabela30{
+    width: 30%;
+}
+
+.Tabela40{
+    width: 40%;
+}
+
+.Tabela90{
+    width: 90%;
+}
+
+.Tabela70{
+    width: 70%;
+}
+
+.TabelaProTopo{
+    float: left;
+    width: 2030px;
+}
+
+.TabelaProTopoExportar{
+    height: 36px;
+}
+
+.TabelaProTopoMensagens{
+    width: 100%
+}
+
+.TabelaProTopoPlanejamento{
+    width: 2050px !important;
+}
+
+.TabelaProCorpo{
+    float: left;
+    width: 1600px;
+}
+
+.TabelaProCorpo{
+    width: 2050px !important;
+}
+
+.TabelaProCorpoListagem{
+    width: 2050px !important;
+}
+
+.TabelaProCorpoMensagens{
+    width: 100% !important
+}
+
+.TabelaProPriorizar{
+    width: 1400px !important;
+}
+
+.TabelaListagemEditarExcluir{
+    height: 34px;
+    padding-top: 10px;
+    border-top: 0px;
+}
+
+.TabelaProPequenina{
+    width: 50px !important;
+    padding: 7px 4px;
+    font-size: 8px;
+}
+
+.TabelaProDataHora{
+    width: 150px;
+    text-align: center;
+    padding: 9px
+}
+
+.TabelaLinha{
+    float: left;
+    width: 100%;
+    position: relative;
+}
+
+.TabelaProVer{
+    width: 100px;
+}
+
+.TabelaProMensagem{
+    width: calc(100% - 150px);
+    padding: 9px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.TabelaLinhaPlano{
+    position: absolute;
+    top: 0px; 
+    left: 0px;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to bottom, #88d4ff, #00156c);
+    color: #FFF;
+    text-align: center;
+    padding-top: 8px;
+    display:none;
+    border-right: 4px solid #F5F5F5;
+}
+
+.TabelaProMensagem2:hover{
+    padding-left: 120px;
+    transition: 0s
+}
+
+.TabelaProMensagem2:hover .TabelaLinhaPlano{
+    display: block;
+}
+
+.TabelaProID{
+    width: 80px !important;
+    min-width: 80px !important;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.TabelaProProcessos{
+    width: 200px;
+    min-width: 200px;
+}
+
+.TabelaProLista{
+    width: 300px;
+    text-align: center;
+}
+
+.TabelaProLista2{
+    width: 850px;
+}
+
+.TabelaProMaquina{
+    width: 150px;
+}
+
+.TabelaProAprovado{
+    width: 100px;
+    text-align: center
+}
+
+.TabelaProCarimbo{
+    width: 80px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.TabelaProSuprimento{
+    width: 150px;
+    min-width: 150px;
+}
+
+.TabelaProModulo{
+    width: 200px;
+    min-width: 200px;
+}
+
+.TabelaProModulo2{
+    width: 240px;
+    min-width: 240px;
+}
+
+.TabelaProDocumento{
+    width: 150px;
+    min-width: 150px;
+}
+
+.TabelaProDescricao{
+    width: 200px;
+    min-width: 200px;
+}
+
+.TabelaProQuantidade{
+    width: 80px;
+    min-width: 80px;
+    text-align: center;
+    text-transform: capitalize;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.TabelaProMaterial{
+    width: 150px;
+    min-width: 150px;
+}
+
+.TabelaProDisponibilidade{
+    width: 140px;
+    min-width: 140px;
+    text-align: center;
+}
+
+.TabelaProMachines{
+    width: 500px;
+    min-width: 140px;
+}
+
+.TabelaProHorario{
+    text-align: center;
+    background: linear-gradient(180deg, #e5e5e5, #fff);
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+}
+
+.TabelaProEditar{
+    width: 80px;
+    min-width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.TabelaProExcluir{
+    width: 80px;
+    min-width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.TabelaProIDCampos{
+    width: 76px;
+    margin-right: 4px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.TabelaProIDCamposSelect{
+    text-align: center;
+}
+
+.TabelaProIDCamposNivel{
+    text-align: center;
+}
+
+.TabelaProModuloCampos{
+    width: 196px;
+    margin-right: 4px;
+}
+
+.TabelaProSuprimentoCampos{
+    width: 146px;
+    margin-right: 4px;
+}
+
+
+.TabelaCorpoSpanExcluir{
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: #222;
+    font-size: 11px;
+    color: #FFF;
+}
+
+.TabelaTopoMaquina{
+    width: 2650px !important;
+}
+
+.MensagensVoltar{
+    float: left;
+    background: rgb(46 221 14);
+    border-radius: 100px;
+    color: #FFF;
+    padding: 8px 14px;
+    font-size: 14px
+}
+
+.MensagensCompleta{
+    float: left;
+    width: 400px;
+    min-height: 100px;
+    padding: 10px;
+    border-radius:5px;
+    background: #ddd;
+    line-height: 1.4;
+}
+
+.MensagensCompletaNum{
+    color: #1f1f1f !important;
+    margin-bottom: 0px;
+    margin-top: 4px;
+}
+
+.MensagensCompletaNum2{
+    margin-top: -10px;
+}
+
+.MensagensCorrigir{
+    float: left;
+    background: rgb(46 221 14);
+    border-radius: 100px;
+    color: #FFF;
+    padding: 8px 14px;
+    font-size: 14px;
+    background: linear-gradient(190deg, #6eb7e1, #010c37);
+    margin-left: 6px
+}
+
+.OrdemCampos{
+    float: left;
+    width: 100%;
+}
+
+.OrdemTitulos1{
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-left: 8px;
+    font-size: 13px
+}
+
+.OrdemTitulos2{
+    float: left;
+    width: calc(30% + 12px);
+    margin-bottom: 5px;
+    padding-left: 8px;
+    font-size: 13px
+}
+
+
+.OrdemCamposNomeInput{
+    width: 30% !important;
+    margin-right: 12px;
+}
+
+.OrdemCamposNomeInputProjeto{
+    width: calc(60% + 12px) !important;
+}
+
+.OrdemCamposSpan{
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    color: #1f1f1f;
+}
+
+.OrdemCamposNomeInputTextarea{
+    width: calc(30% + 12px) !important;
+    border-radius: 12px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+    height: 120px;
+    margin-bottom: 28px !important;
+}
+
+.OrdemCampos2{
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: -20px;
+    padding-left: calc(33.3% - 24px)
+}
+
+.OrdemCampos3{
+    float: left;
+    width: calc(33.33% - 24px);
+}
+
+.OrdemCampos100{
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #1f1f1f;
+    padding-left: 12px
+}
+
+.OrdemCampos4{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.OrdemCampos5{
+    padding-left: 0;
+    width: calc(66.6% - 24px);
+}
+
+.OrdemCampos6{
+    margin-top: 28px;
+}
+
+.OrdemCampos7{
+    float: left;
+    margin-top: 20px;
+}
+
+.OrdemCampos8{
+    float: left;
+    margin-bottom: 4px;
+}
+
+.OrdemCampos9{
+    float: left;
+    margin-bottom: -6px;
+}
+
+.OrdemCampos10{
+    margin-top: 0;
+}
+
+.OrdemCamposNomeInput2{
+    width: calc(33.3% - 12px) !important;
+    margin-right: 12px;
+}
+
+.OrdemCamposText{
+    float: left;
+    background-color: #FFF;
+    border-radius: 49px;
+    padding: 8px 14px;
+    border: 2px solid #777;
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+
+.OrdemCamposText2{
+    margin-left: 10px;
+}
+
+.OrdemAprovarBotao {
+    cursor: pointer;
+    background: linear-gradient(to bottom, #88d4ff, #00156c);
+    color: #FFF;
+    text-align: center
+}
+
+.OrdemRejeitarBotao {
+    cursor: pointer;
+    background: linear-gradient(to bottom, rgb(239, 96, 96), rgb(149, 3, 3));
+    color: #FFF;
+    text-align: center
+}
+
+.OrdemAprovarBotao:hover{
+    background: linear-gradient(190deg, #6eb7e1, #010c37);
+}
+
+.OrdemAprovadoBotao{
+    background: linear-gradient(to bottom, #e0dfdf, #aeafb3);
+    cursor: pointer;
+    transition: 0s;
+    text-align: center;
+}
+
+.MaquinaAdicionarErro{
+    float: left;
+    width: 4px;
+    height: 84px;
+    background: rgb(46 221 14);
+    margin-right: 7px;
+    margin-top: -4px
+}
+
+.MaquinaAdicionarErroDiv{
+    float: left;
+    width: calc(100% - 11px);
+    height: 80px
+}
+
+.MaquinaAdicionarErroDiv2{
+    float:left;
+    width: 100%;
+    font-size: 15px;
+    font-weight:700;
+    color:#1f1f1f
+}
+
+.MaquinaAdicionarErroDiv3{
+    float:left;
+    width: 100%;
+    font-size: 15px;
+    margin-top: 10px;
+    color:#1f1f1f
+}
+
+.ModalAprovar{
+    background: linear-gradient(to bottom, #88d4ff, #00156c);
+    border-radius: 0px !important;
+}
+
+.ModalRejeitar{
+    background: linear-gradient(to bottom, rgb(239, 96, 96), rgb(149, 3, 3));
+    border-radius: 0px !important;
+}
+
+/* .ModalAprovar:hover{
+    background: linear-gradient(190deg, #6eb7e1, #010c37);
+} */
+
+#Modal{
     position: fixed;
-    bottom: 45px;
-    right: 45px;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 
-@keyframes roda-roda {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+#Modal .Fundo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.66);
+    backdrop-filter: blur(10px);
+}
+
+#Modal .Modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+#Modal .ModalTitulo{
+    float: left;
+    width: 100%;
+    color: #1f1f1f;
+}
+
+#Modal .ModalTexto{
+    float: left;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#Modal .ModalBotao{
+    float: left;
+    padding: 10px 16px;
+    color: #FFF;
+    border-radius: 100px;
+    border: 0px solid #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#Modal .ModalExcluir{
+    background: rgb(206, 0, 0);
+}
+
+#Modal .ModalExportar{
+    background: rgb(44 125 29);
+}
+
+#Modal .ModalFechar{
+    float: left;
+    margin-top: 12px;
+    margin-left: 8px;
+    color: #444;
+}
+
+#Modal .ModalFechar:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.ModalTextoInputDiv{
+    float: left;
+    width: 100%;
+    margin-top: 20px
+}
+
+.ModalTextoInputDiv input{
+    float: left;
+    width: 100%;
+    padding: 11px 10px;
+    border: 2px solid #777;
+    border-radius: 5px;
+    color:#1f1f1f
+}
+
+.Paginacao{
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.PaginacaoDiv{
+    min-width: 40px;
+    height: 40px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(46 221 14);
+    background: #fff;
+    cursor: pointer;
+}
+
+.PaginacaoDiv:hover{
+    transition: 0s;
+    background: rgb(201, 225, 197);
+}
+
+.PaginacaoDivSelect{
+    background: rgb(46 221 14);
+    color: #FFF;
+}
+
+.PaginacaoDivSelect:hover{
+    background: rgb(46 221 14) !important;
+    color: #FFF  !important;
+}
+
+.PaginacaoDivSelectTres{
+    cursor: auto;
+}
+
+#csv_dados{
+    display: none;
+}
+
+.Carregando{
+    float: left;
+    width: 100%;
+    margin-top: -10px;
+    display: flex;
+    align-items: center
+}
+
+.Carregando img{
+    float: left; 
+    width: 26px;
+    margin-right: 5px
+}
+
+.Carregando img{
+    float: left;
+    margin-left: 6px
+}
+
+.Input{
+    float: left;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+.InputRadio{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    color: #222;
+}
+
+.InputSpan{
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.Textarea{
+    float: left;
+    width: 100%;
+}
+
+.TextareaDiv{
+    float: left;
+    width: 14.25%;
+    opacity: 0.2;
+}
+
+.TextareaTopo{
+    float: left;
+    width: 100%;
+}
+
+.TextareaTopo{
+    float: left;
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    background-color: rgb(100 100 100);
+    border-right: 1px solid #f5f5f5;
+    text-align: center;
+}
+
+.TextareaTopoNivel{
+    border-top-left-radius: 16px;
+}
+
+.TextareaTopoEstado{
+    border-top-right-radius: 16px;
+}
+
+.TextareaTitulo{
+    float: left;
+    width: 100%;
+    margin-bottom: 12px;
+    margin-top: 6px;
+    font-size: 15px;
+}
+
+.MaquinaTextarea{
+    float: left;
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgb(100 100 100);
+    padding: 14px;
+    margin-bottom: 24px;
+    color: #222;
+}
+
+.ProcessosCampos1{
+    float: left;
+    width: 316px;
+}
+
+.ProcessosCampos2{
+    float: left;
+    width: 106px;
+}
+
+.ProcessosCampos3{
+    float: left;
+    width: 157.5px;
+    opacity: 0.25;
+}
+
+.ProcessosCampos3 input{
+    width: calc(100% - 14px) !important;
+}
+
+.ListaEsperaCorpo{
+    float: left;
+    min-width: 100%;
+    position: relative;
+}
+
+.ListaEsperaTopo{
+    float: left;
+    width: 100%;
+    background:linear-gradient(to right, rgb(46 221 14), transparent);
+    padding: 10px;
+    color: #FFF;
+    font-weight: 700
+}
+
+.ListaEspera{
+    float: left;
+    width: 300px;
+    margin-top: 40px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ListaEspera2{
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.ListaEsperaBotao{
+    float: left;
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    background: #7F7F7F;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 38px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.ListaEsperaBotao2{
+    background:rgb(46 221 14);
+    cursor:auto;
+}
+
+.ListaEsperaBolinha{
+    float: left;
+    width: 100%
+}
+
+.ListaEsperaBolinhaOut{
+    margin-left: 136px;
+    margin-bottom: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 2px solid #7F7F7F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    transition: 0s;
+}
+
+.ListaEsperaBolinhaOut2{
+    margin-left: 136px;
+    margin-bottom: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 2px solid rgb(46 221 14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    transition: 0s;
+}
+
+
+.ListaEsperaBolinhaIn{
+    width: 15px;
+    height: 15px;
+    background: #7F7F7F;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #F5F5F5;
+}
+
+.ListaEsperaBolinhaIn2{
+    width: 15px;
+    height: 15px;
+    background: rgb(46 221 14);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.ListaEsperaLinha{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: 92px;
+    margin-left: 150px;
+}
+
+.ListaEsperaLinha2{
+    top: 50px;
+    left: 149px;
+    margin-left: 0px;
+    width: 2px;
+}
+
+.ListaEsperaListaDiv{
+    float: left;
+    width: 300px;
+}
+
+.ListaEsperaListaDiv2{
+    height: 376px;
+    width: 0px;
+}
+
+.ListaEsperaLista2{
+    float: left;
+    width: 100%;
+}
+
+.ListaEsperaHorizontal{
+    float: left;
+    width: 300px;
+}
+
+.ListaEsperaSpan{
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.ListaEsperaSpan2{
+    background-color: #F5F5F5;
+}
+
+.ListaEsperaC{
+    float: left;
+}
+
+.ListaEsperaC2{
+    width: 100%;
+}
+
+.ListaEsperaFim{
+    float: left;
+}
+
+.ListaEsperaSpanItem{
+    float: left;
+    max-width: 200px;
+    text-align: center;
+    color: #1f1f1f;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ListaEsperaSpanHoraData{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 2px;
+    color: #1f1f1f
+}
+
+.ListaEsperaTempos{
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+    position: relative;
+}
+
+.ListaEsperaTempos2{
+    width: 484px;
+    background: #F5F5F5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0px;
+    top: 30px;
+    justify-content: flex-start;
+}
+
+.ListaEsperaTempos3{
+    width: 110px !important;
+    height: 220px !important;
+    max-height: 220px !important;
+    background: #F5F5F5;
+    margin-top: 0px;
+    top: 30px;
+    justify-content: flex-start;
+    margin-top: 46px !important
+}
+
+.ListaEsperaTemposFinalizado{
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(239, 96, 96), rgb(149, 3, 3));
+    padding: 2px 5px;
+    color: #FFF;
+    font-size: 10px;
+    top: -14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    display: none;
+}
+
+.ListaEsperaTemposFinalizado2{
+    top: 60px;
+    display: block;
+    background: linear-gradient(to top, #444, #999);
+}
+
+.ListaEsperaTemposDrop{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.2)
+}
+.ListaEsperaTemposDrop2{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.ListaEsperaTemposDrop2Titulo{
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+
+.ListaEsperaTemposDrop2Botao{
+    width: 100px;
+    height: 40px;
+    background: linear-gradient(190deg, #88d4ff, #00156c);
+    font-weight: 700;
+    color: #FFF;
+    float: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ListaEsperaTemposDrop2Botao2{
+    background: linear-gradient(to bottom, rgb(239, 96, 96), rgb(149, 3, 3)); 
+}
+
+.Drop{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Drop2{
+    background: rgba(0,0,0,0.15);
+    width: 845px;
+    
+}
+
+.ListaEsperaTemposTempo{
+    display: inline-block;
+    width: 92px;
+    height: 50px;
+    max-height: 50px;
+    background: #FFF;
+    margin: 0px 4px;
+    margin-top: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    
+}
+
+.Horario2{
+    width: 113px !important;
+}
+
+.Descricao2{
+    margin-top: 0px
+}
+
+.ListaEsperaTemposTempo2{
+    width: 194px;
+    height: 100px;
+    padding: 0px 10px;
+}
+
+.ListaEsperaTemposTempo3{
+    width: 50px;
+    padding: 0px 10px;
+}
+
+.ListaEsperaTemposTempo4{
+    width: 134px;
+    padding: 0px 10px;
+}
+
+.ListaEsperaTemposTempo5{
+    width: 476px;
+    max-height: 100px !important;
+}
+
+.ListaEsperaTemposTempo7{
+    margin-top: -10px
+}
+
+
+.Descricao2{
+    margin-top: -10px
+}
+.ListaEsperaTemposTempo6{
+    width: 134px;
+    margin-top: -10px;
+}
+
+.ListaEsperaTemposTempo2 span, .ListaEsperaTemposTempo4 span{
+    text-align: left
+}
+
+.ListaEsperaTemposTempoTitulo{
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 7px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.ListaEsperaTemposTempoHorario{
+    float: left;
+    width: 100%;
+    margin-top: 4px; 
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+.TempoHorario2{
+    padding: 0px 16px;
+}
+
+.ListaEsperaTemposTempoHorarioConfirmar{
+    float: left;
+    width: 84px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFF;
+    background: linear-gradient(190deg, #aaff35, #397100);
+    text-align: center;
+    padding-top: 3px;
+    margin-left: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.ContinuarInicio{
+    background: linear-gradient(190deg, #aaff35, #397100);
+}
+
+.ConfirmarFinal{
+    background: linear-gradient(to bottom, rgb(239, 96, 96), rgb(149, 3, 3));
+}
+
+.ListaEsperaTemposTempoHorario select{
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.3));
+}
+
+.ListaEsperaText{
+    width: calc(100% - 24px);
+    text-align: center;
+}
+
+.MenuMobileFechar{
+    display: none;
+    width: 24px !important;
+}
+
+.MigalhaMaquina{
+    float: left;
+    position:relative
+}
+
+.MigalhaMaquina:hover .MigalhaMaquinaFundo{
+    display: block;
+}
+
+.MigalhaMaquinaFundo{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    cursor:pointer;
+    display: none;
+}
+
+.MigalhaMaquinaFundoBotao{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(190deg, #88d4ff, #00156c);
+    width: 100px;
+    height: 30px;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.Exportados{
+    float: left;
+    width: 100%;
+    position: relative;
+    font-size: 26px;
+    line-height: 1.3;
+    z-index: 1;
+    margin-top: -50px;
+    text-align: center;
+    color: #1f1f1f
+}
+
+.ExportadosCorpo{
+    display:inline-block;
+    width: 360px;
+    text-align: left
+}
+
+.ExportadosCorpo img{
+    float: left;
+    width: 86px;
+    margin-top:8px;
+    margin-right: 14px
+}
+
+.ExportadosCorpo span{
+    float: left;
+    width: 260px
+}
+
+.ExportadosCorpo button{
+    margin-top: 12px;
+    margin-left: 100px;
+    background: rgb(46 221 14);
+    font-size: 13px;
+    color: #FFF;
+    border-radius: 100px;
+    border: 0px;
+    padding: 8px 12px;
+    cursor: pointer;
+
+}
+
+.Machines{
+    float: left;
+    width: 500px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+
+.Machines2{
+    float: left;
+    width: 760px;
+    margin-right: 40px;
+    margin-bottom: 80px
+}
+
+.Machines3{
+    float: left;
+    max-width: 432px;
+    margin-right: 40px;
+    display: grid;
+}
+
+.MachinesCorpo{
+    float: left;
+    width: 1080px
+}
+
+.MachinesCorpo2{
+    width: 3200px
+}
+
+
+.MachinesCorpo3{
+    width: 1888px
+}
+
+.PriorizarTempos{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.PriorizarTemposSpan{
+    font-size: 14px;
+    color: #888;
+    position: relative;
+    top: 2px;
+    padding-left: 2px
+}
+
+.PriorizarTemposSpanVerde{
+    color: rgb(39 184 13);
+}
+
+.BuscarDesenho{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px
+}
+
+.BuscarDesenhoSelect{
+    float: left; 
+    width: 200px; 
+    height: 30px; 
+    padding: 4px; 
+    padding-left: 10px; 
+    font-size: 13px; 
+    border-radius: 100px; 
+    border: 1px solid #a0a0a0; 
+    color: #777
+}
+
+.BuscarDesenhoSelectVerde{
+    border: 1px solid rgb(39 184 13);
+    color: rgb(39 184 13);
+}
+
+.QuadradoProtetor{
+    position: absolute;
+    left: -22px;
+    top: 9px;
+    width: 20px;
+    height: 20px;
+    background-color: #F5F5F5;
+}
+
+#Planejamento{
+    float: left;
+    width: 100%;
+}
+
+.PlanejamentoItens{
+    float: left;
+    width: 100%;
+}
+
+.PlanejamentoItensMaquina{
+    float: left;
+    width: 96px;
+    margin-right: 12px;
+    margin-bottom: 10px
+}
+
+.PlanejamentoItensMaquinaImg{
+    float: left;
+    width: 96px; 
+    height: 96px; 
+    background-image:url('machine3.png');
+    background-repeat: no-repeat;
+    background-color: #FFF; 
+    background-position: center center;
+    background-size: 50px 50px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+.PlanejamentoItensMaquinaSpan{
+    float: left; 
+    width: 100%; 
+    margin-top: 5px; 
+    font-size: 15px; 
+    color: #777; 
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.ItensAtivo{
+    color: rgb(46 221 14) !important;
+}
+
+.ImgAtivo{
+    background-color: rgb(46 221 14);
+    background-image:url('machine2.png');
+}
+
+.PlanejamentoCheckbox{
+    float: left;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.PlanejamentoCheckbox2{
+    margin-bottom: 12px
+}
+
+.PlanejamentoCheckboxCheckbox{
+    float: left;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: 4px;
+    margin-right: 4px;
+}
+
+.PlanejamentoVoltar{
+    float: left;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-bottom: 32px;
+    color:rgb(60 199 14);
+}
+
+.CalendarioTopo{
+    float: left;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    margin-top: 10px
+}
+
+.CalendarioTopoSpan{
+    float: left;
+    width: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #FFF;
+    margin-bottom: 0px;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999;
+    padding: 1px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.CalendarioTabelaSemana{
+    float: left;
+    width: 50px;
+}
+
+.CalendarioTabelaSemanaSpan{
+    float: left;
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(190deg, #aaff35, #397100);
+    font-size: 12px;
+    color: #FFF;
+}
+
+.Alerta{
+    background: linear-gradient(190deg, rgb(255 175 4), rgb(127 88 3));
+}
+
+.Urgente{
+    background: linear-gradient(190deg, rgb(239, 96, 96), rgb(149, 3, 3));
+}
+
+.Vazio{
+    background: linear-gradient(190deg, #6f6d6d, #848484);;
+}
+
+.Nada{
+    background-image: repeating-linear-gradient(12deg,red,blue 3%,green 5%)
+}
+
+.CalendarioTopoSpan2{
+    width: 100%;
+}
+
+.CalendarioTopoSpan3{
+    float: left;
+    width: 400px;
+    margin-top: 5px;
+    margin-bottom: 24px;
+}
+
+.CalendarioTopoSpan3Input{
+    float: left;
+    width: 120px;
+    height: 36px;
+    margin-right: 5px;
+    border: 2px solid #9f9f9f;
+    border-radius: 100px;
+    padding: 7px 10px;
+}
+
+.CalendarioTopoSpan3Botao{
+    float: left;
+    width: 90px;
+    height: 36px;
+    border-radius: 100px;
+    padding: 9.5px 10px;
+    background: linear-gradient(190deg, #88d4ff, #00156c);
+    font-size: 13px;
+    font-weight: 700;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+.CalendarioTopoSpan3Titulo{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    color: #333;
+    padding-bottom: 6px;
+}
+
+.CalendarioTabela{
+    float: left;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+}
+
+.CalendarioTabelaTitulo{
+    float: left;
+    width: 300px;
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+    overflow: hidden;
+}
+
+.CalendarioTabelaTituloSpan{
+    float: left;
+    width: 100%;
+    font-size: 13px;
+    background: linear-gradient(-7deg, black, #7a8774);
+    color: #FFF;
+    padding: 8px;
+}
+
+.CalendarioDiaSemana{
+    float: left;
+
+}
+
+.CalendarioTopoD{
+    float: left;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    overflow: hidden;
+}
+
+.CalendarioTopoDia{
+    float: left;
+    overflow: hidden;
+    background: linear-gradient(10deg, black, #7a8774);
+}
+
+.CalendarioTopoDiaDia{
+    float: left;
+    width: 100%;
+} 
+
+.CalendarioTopoDiaSemana{
+    float: left;
+    width: 350px;
+}
+
+.CalendarioNomeMaquina{
+    float: left;
+}
+
+.CalendarioTempoMedio{
+    float: left;
+    background: linear-gradient(190deg, #90ce3a, #182907);
+    font-size: 10px;
+    color: #FFF;
+    padding: 1px 2px;
+    margin-left: 5px;
+    margin-top: 1px;
+    font-weight: 700;
+}
+
+.CalendarioDia{
+    float: left;
+    width: 50px;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bbb;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(46 221 14);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgb(46 221 14);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@keyframes bolinha {
+    0%   {transform: scale(1);}
+    100% {transform: scale(1.33);}
   }
 
-@keyframes roda-roda-2 {
-    from {transform: rotate(360deg);}
-    to {transform: rotate(0deg);}
-}
+  .BolinhaAnimada {
+    animation-name: bolinha;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
 
-@media(max-width: 1170px){
-    .tropical{
-        top: 10px;
-        left: auto;
-        right: -190px;
-        width: 340px;
+@media only screen and (max-width: 780px) {
+    #App {
+      width: 100%;
+      left: 0;
     }
 
-    .estrela{
-        bottom: -290px;
-        right: -220px;
-    }
-}
-
-@media(max-width: 940px){
-    .logo{
-        width: 140px;
-    }
-
-    .consumo{
-        width: 130px;
-    }
-
-    .img{
-        height: 40vh;
-        margin-top: 100px
-    }
-
-    .box{
-        height: calc(60vh - 100px);
-    }
-
-    .box-title{
+    #Menu{
+        width: 100%;
         display: none;
     }
 
-    .box-title-2{
+    #Menu .Menu{
+        width: 100%;
+    }
+
+    #Menu .MenuLista{
+        text-align: center;
+    }
+
+    #MenuMobile{
+        display: flex;
+    }
+
+    #Corpo{
+        padding-top: 108px;
+        padding-left: 24px;
+    }
+
+    #Corpo h1{
+        width: 100%;
+    }
+
+    #Menu .Fechar{
         display: block;
     }
 
-    .box-input{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    #Menu .MenuListaLista:hover .MenuListaSub{
+        bottom: 0%;
     }
 
-    .box-frase{
-        font-size: 0.9rem;
+    #Menu .MenuListaSub{
+        width: calc(100% + 30px);
+        text-align: center;
+        top: calc(-100% - 28px);
+        left: -10px;
     }
 
-    .box-input input{
-        max-width: 400px;
+    #Menu .MenuListaLista:hover .MenuListaSub2{
+        margin-top: 0px;
     }
 
-    .box-input button{
-        min-width: 140px;
-        margin-left: 0px;
+    #Menu .MenuListaSub2{
+        margin-top: 29px;
+    }
+
+    #Menu .MenuListaSubSpan{
+        padding: 8px 0
+    }
+
+    .TabelaTopo{
+        width: 800px;
+    }
+
+    .TabelaCorpo{
+        width: 800px;
+    }
+
+    .TabelaCorpoSpan{
+        padding: 10px
+    }
+
+    .TabelaTopoSpan{
+        padding: 10px;
+    }
+
+    .TabelaID{
+        width: 100px
+    }
+
+    .TabelaNomeNivel{
+        width: 40%;
+    }
+
+    .TabelaNomeMaquina{
+        display: none;
+    }
+
+    .TabelaEditar{
+        width: 20%;
+    }
+
+    .TabelaExcluir{
+        width: 20%;
+    }
+
+    .TabelaMaq{
+        width: 200px !important;
+    }
+
+
+    .NivelSpan{
+        width: 80%;
+    }
+
+    .TabelaItem{
+        width: 80%;
+    }
+    
+    .TextareaDiv{
+        width: 165px;
+    }
+
+    .Textarea{
+        width: 1155px;
+    }
+
+    /* #Menu .MenuListaSub{
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    #Menu .MenuListaSubSpan{
+        padding: 8px 0
+    } */
+
+    .MaquinaAdicionarTopo{
+        margin-bottom: 28px;
+    }
+
+    .MaquinaAdicionarTopo2{
+        padding-left: 0px;
+        padding-bottom: 20px
+    }
+
+    #Modal .Modal{
+        width: calc(100% - 40px);
+    }
+
+    #Modal .ModalTexto{
+        padding: 20px 0;
+    }
+
+    .ProcessosCampos1{
+        width: 100%;
+    }
+
+    .ProcessosCampos4{
+        width: calc(100% - 184px);
+    }
+
+    .NomeMaquina3{
+        width: 300px !important;
+    }
+
+    .MaquinaAdicionarTopo2Select3{
+        width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .OrdemCamposNomeInput{
+        width: 100% !important;
+    }
+
+    .OrdemCamposNomeInputProjeto{
+        width: calc(100% - 12px) !important;
+    }
+
+    .OrdemCamposNomeInputTextarea{
+        width: calc(100% + -12px) !important;
+    }
+
+    .OrdemCampos2{
+        width: 100%;
+        padding-left: 0
+    }
+
+    .OrdemCampos3{
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+
+    .ListaEsperaTopo{
+        font-size: 13px;
+    }
+
+    .Fechar{
+        display: none;
+    }
+
+    #Menu .MenuNome{
+        display: none;
+    }
+
+    #Menu .MenuLis{
+        border-top: 10px solid #373737;
+        max-height: calc(100% - 90px);
+    }
+
+    #Menu .Menu{
+        background: none;
+    }
+
+    .Input{
         margin-top: 10px
     }
 
-    .box-title{
-        margin-bottom: 3vh
+    .MigalhaSpanExportar{
+        margin-top: 2px;
+        margin-bottom: 38px;
+    }
+
+    .MigalhaSpanExcluir{
+        display: none;
+    }
+
+    .OrdemCampos5{
+        width: 100%;
+    }
+
+    .OrdemCamposText{
+        width: 150px;
+    }
+
+    .OrdemTitulos2{
+        width: 100%;
+    }
+
+    .OrdemTitulos4{
+        display: none;
+    }
+
+    .TabelaLinhaPlano{
+        display: block;
+    }
+
+    .TabelaProMensagem{
+        padding-left: 120px
+    }
+
+    .TabelaProMensagemTopo{
+        padding-left: 9px
+    }
+
+    .TabelaProMensagem{
+        width: 500px;
+    }
+
+    .TabelaMensagens{
+        width: 650px;
     }
 }
 
-@media(max-width: 760px){
-    .logo{
-        top: 45px;
-        left: 45px;
-        width: 100px;
-    }
-
-    .tropical{
-        right: -115px;
-        width: 210px;
-    }
-
-    .estrela{
-        width: 400px;
-        bottom: -260px;
-        right: -120px;
-    }
-
-    .box-title-2-futuro{
-        margin-bottom: -5px
-    }
-
-    .box-title-2{
-        font-size: 2.25rem
-    }
-
-    .box-input input{
-        width: 340px;
-        padding: 13px 20px
-    }
-
-    .box-input button{
-        height: 44px;
-    }
-
-    .consumo{
-        width: 90px;
-        right: auto;
-        left: 45px;
-        bottom: 30px;
+@media only screen and (max-width: 480px) {
+    #Corpo{
+        padding-top: 100px;
+        padding-left: 20px;
     }
 }
